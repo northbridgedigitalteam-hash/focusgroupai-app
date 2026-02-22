@@ -581,191 +581,181 @@ def get_contextual_personas(product_description):
     
     if any(word in product_lower for word in ['recipe', 'cook', 'food', 'meal', 'kitchen', 'chef', 'baking', 'ingredient']):
         return [
-            {"name": "Marco Rossi", "age": 38, "occupation": "Professional Chef", "traits": "Perfectionist, values technique, skeptical of shortcuts, judges apps by recipe authenticity"},
-            {"name": "Jennifer Walsh", "age": 34, "occupation": "Working Mother of Two", "traits": "Time-starved, needs family-friendly meals, values convenience but wants healthy options"},
-            {"name": "David Chen", "age": 28, "occupation": "Food Blogger", "traits": "Trend-focused, loves experimenting, visual presentation matters, shares on social media"}
+            {"name": "Marco Rossi", "age": 38, "occupation": "Professional Chef", "traits": "Perfectionist, values technique, skeptical of shortcuts, judges apps by recipe authenticity, high culinary standards"},
+            {"name": "Jennifer Walsh", "age": 34, "occupation": "Working Mother of Two", "traits": "Time-starved, needs family-friendly meals, values convenience but wants healthy options, budget-conscious for groceries"},
+            {"name": "David Chen", "age": 28, "occupation": "Food Blogger & Content Creator", "traits": "Trend-focused, loves experimenting with new cuisines, visual presentation matters, shares everything on social media, needs Instagram-worthy results"}
         ]
-    elif any(word in product_lower for word in ['fitness', 'workout', 'exercise', 'gym', 'health', 'wellness', 'yoga']):
+    elif any(word in product_lower for word in ['fitness', 'workout', 'gym', 'health', 'exercise', 'training', 'yoga', 'running']):
         return [
-            {"name": "Alex Thompson", "age": 32, "occupation": "Software Engineer", "traits": "Analytical, data-driven, wants measurable results, skeptical of fitness fads"},
-            {"name": "Maya Patel", "age": 28, "occupation": "Yoga Instructor", "traits": "Holistic approach, values mind-body connection, prefers low-impact workouts"},
-            {"name": "James Wilson", "age": 45, "occupation": "Busy Executive", "traits": "Time-poor, needs efficiency, willing to pay for convenience, likes quick results"}
+            {"name": "Alex Rivera", "age": 29, "occupation": "Personal Trainer & Nutrition Coach", "traits": "Data-obsessed, needs measurable results, skeptical of fitness fads, science-based approach, wants client progress tracking"},
+            {"name": "Sarah Mitchell", "age": 42, "occupation": "Corporate Executive", "traits": "Time-poor, stress management focus, willing to pay for convenience, needs flexibility for travel schedule, beginner-friendly workouts"},
+            {"name": "Jordan Park", "age": 24, "occupation": "College Student & Part-time Barista", "traits": "Budget-conscious, social motivation from friends, beginner-friendly needs, influenced by fitness influencers on TikTok, wants quick dorm-room workouts"}
         ]
-    elif any(word in product_lower for word in ['finance', 'banking', 'invest', 'money', 'budget', 'saving']):
+    elif any(word in product_lower for word in ['finance', 'money', 'budget', 'invest', 'stock', 'crypto', 'trading', 'saving']):
         return [
-            {"name": "Sarah Chen", "age": 35, "occupation": "Financial Analyst", "traits": "Risk-averse, detail-oriented, wants security and transparency"},
-            {"name": "Marcus Webb", "age": 24, "occupation": "Recent Graduate", "traits": "New to investing, wants education, needs simple interface, budget-conscious"},
-            {"name": "Linda Martinez", "age": 52, "occupation": "Small Business Owner", "traits": "Practical, values time-saving tools, wants to separate business/personal finances"}
+            {"name": "Robert Chen", "age": 45, "occupation": "Certified Financial Planner", "traits": "Risk-averse with client money, needs regulatory compliance, skeptical of robo-advisors, values personal relationships over algorithms"},
+            {"name": "Emily Rodriguez", "age": 31, "occupation": "Tech Startup Employee", "traits": "High disposable income, wants automated investing, interested in crypto, values time over micromanagement, willing to pay for premium features"},
+            {"name": "Michael Thompson", "age": 58, "occupation": "High School Principal", "traits": "Conservative approach, nearing retirement, needs simplicity, distrusts new fintech, wants guaranteed returns over speculation, needs educational resources"}
+        ]
+    elif any(word in product_lower for word in ['education', 'learn', 'course', 'student', 'study', 'school', 'teaching', 'tutor']):
+        return [
+            {"name": "Dr. Amanda Foster", "age": 52, "occupation": "University Professor", "traits": "Academic rigor, skeptical of ed-tech trends, values accreditation, needs administrative tools, wants measurable learning outcomes for students"},
+            {"name": "Tyler Johnson", "age": 20, "occupation": "Computer Science Student", "traits": "Self-taught learner, prefers video content, wants industry-relevant skills, price-sensitive as a student, values community and peer feedback"},
+            {"name": "Lisa Park", "age": 36, "occupation": "Homeschooling Parent", "traits": "Curriculum control is crucial, needs progress tracking for multiple children, values safety and age-appropriate content, willing to invest in quality education tools"}
+        ]
+    elif any(word in product_lower for word in ['travel', 'trip', 'vacation', 'hotel', 'flight', 'booking', 'destination']):
+        return [
+            {"name": "James Morrison", "age": 41, "occupation": "Management Consultant", "traits": "Frequent business traveler, loyalty program obsessed, needs seamless booking, values time over money, wants automatic itinerary management"},
+            {"name": "Sofia Patel", "age": 27, "occupation": "Remote Software Developer", "traits": "Digital nomad lifestyle, budget backpacker turned comfortable traveler, values authentic local experiences, plans trips around coworking spaces"},
+            {"name": "The Williams Family", "age": 45, "occupation": "Parents of Three", "traits": "Safety-first for kids, needs all-inclusive convenience, plans around school schedules, values memories over luxury, overwhelmed by planning logistics"}
+        ]
+    elif any(word in product_lower for word in ['shopping', 'ecommerce', 'buy', 'store', 'retail', 'fashion', 'clothes']):
+        return [
+            {"name": "Victoria Chang", "age": 33, "occupation": "Fashion Buyer for Department Store", "traits": "Trend forecaster, quality over quantity, skeptical of fast fashion, wants exclusive access, values sustainability credentials, early adopter of new brands"},
+            {"name": "Marcus Johnson", "age": 29, "occupation": "Warehouse Supervisor", "traits": "Deal hunter, compares prices across multiple sites, reads reviews religiously, budget-conscious but splurges on hobbies, wants fast shipping"},
+            {"name": "Betty Thompson", "age": 68, "occupation": "Retired Nurse", "traits": "Needs simplicity, distrusts online payments, wants phone support available, values familiar brands, frustrated by complicated return processes, shops for grandchildren"}
         ]
     else:
         return [
-            {"name": "Marcus Chen", "age": 32, "occupation": "Software Engineer", "traits": "Analytical, data-driven, skeptical of marketing claims, values efficiency"},
-            {"name": "Sarah Williams", "age": 28, "occupation": "Marketing Director", "traits": "Early adopter, enthusiastic, values convenience and design"},
-            {"name": "Lisa Rodriguez", "age": 35, "occupation": "Elementary School Teacher", "traits": "Budget-conscious, needs simplicity, risk-averse, values community"}
+            {"name": "Alex Thompson", "age": 32, "occupation": "Product Manager at Tech Company", "traits": "Analytical decision-maker, skeptical of marketing claims, needs data-driven proof, compares multiple alternatives before committing, values integration with existing tools"},
+            {"name": "Jordan Lee", "age": 28, "occupation": "Marketing Specialist", "traits": "Early adopter of new tools, enthusiastic about innovation, values convenience and user experience over price, influenced by peer recommendations, willing to pay premium for time savings"},
+            {"name": "Casey Martinez", "age": 35, "occupation": "Operations Director", "traits": "Risk-averse, budget-conscious with clear ROI requirements, needs simplicity and minimal training, worried about team adoption, prefers proven solutions over bleeding edge"}
         ]
 
 @app.route('/')
-def index():
+def home():
     """Render the main page"""
     return render_template_string(HTML_TEMPLATE, result=None)
 
 @app.route('/generate-personas', methods=['POST'])
 def generate_personas():
-    """Generate personas using OpenAI"""
+    """Generate personas using OpenAI or fallback"""
     try:
-        data = request.json
+        data = request.get_json()
         product_description = data.get('product_description', '')
         target_market = data.get('target_market', '')
         
-        # Check for API key and try to use OpenAI
-        if api_key and api_key != "your-openai-api-key-here":
-            try:
-                prompt = f"""Based on this product description, generate 3 detailed user personas for a focus group.
-                
-Product Description: {product_description}
-Target Market: {target_market if target_market else 'General consumers'}
+        if not product_description:
+            return jsonify({"error": "No product description provided"}), 400
+        
+        # Try OpenAI first
+        try:
+            prompt = f"""Analyze this product and create 3 realistic user personas who would actually use it.
 
-For each persona, provide:
-1. Name (realistic and diverse)
-2. Age (specific number)
-3. Occupation
-4. Personality & Traits (comma-separated, descriptive)
+Product: "{product_description}"
+Target: {target_market or 'General consumers'}
 
-Format your response as a JSON array with objects containing keys: name, age, occupation, traits
-Make the personas diverse in age, background, and perspective. Each should have a unique viewpoint on this product."""
+Create personas that are SPECIFIC to this product type. Consider:
+- What jobs/roles would actually use this?
+- What ages make sense for this product?
+- What personality traits relate to HOW they'd use it?
 
-                response = client.chat.completions.create(
-                    model="gpt-3.5-turbo",
-                    messages=[
-                        {"role": "system", "content": "You are a user research expert who creates realistic personas. Always respond with valid JSON only."},
-                        {"role": "user", "content": prompt}
-                    ],
-                    temperature=0.8,
-                    max_tokens=800
-                )
-                
-                # Parse the response
-                personas_text = response.choices[0].message.content.strip()
-                # Clean up the response to ensure it's valid JSON
-                if personas_text.startswith('```json'):
-                    personas_text = personas_text[7:]
-                if personas_text.startswith('```'):
-                    personas_text = personas_text[3:]
-                if personas_text.endswith('```'):
-                    personas_text = personas_text[:-3]
-                
-                personas = json.loads(personas_text)
+Make them DISTINCT:
+- One expert/skeptical type who demands proof
+- One enthusiastic early adopter who sees potential
+- One practical user who needs clear value
+
+Return valid JSON only:
+[
+  {{"name": "Full Name", "age": 32, "occupation": "Job Title", "traits": "3-4 specific traits"}},
+  {{"name": "Full Name", "age": 28, "occupation": "Job Title", "traits": "3-4 specific traits"}},
+  {{"name": "Full Name", "age": 35, "occupation": "Job Title", "traits": "3-4 specific traits"}}
+]"""
+            
+            response = client.chat.completions.create(
+                model="gpt-4",
+                messages=[{"role": "user", "content": prompt}],
+                temperature=0.7,
+                max_tokens=800
+            )
+            
+            content = response.choices[0].message.content
+            
+            # Extract JSON if wrapped in markdown
+            if "```json" in content:
+                content = content.split("```json")[1].split("```")[0]
+            elif "```" in content:
+                content = content.split("```")[1].split("```")[0]
+            
+            personas = json.loads(content.strip())
+            
+            # Validate structure
+            if len(personas) == 3 and all('name' in p and 'age' in p and 'occupation' in p and 'traits' in p for p in personas):
                 return jsonify({"personas": personas})
-                
-            except Exception as e:
-                print(f"OpenAI API error: {e}")
-                # Fall back to contextual personas
+            else:
+                # Fall back to contextual if validation fails
                 personas = get_contextual_personas(product_description)
                 return jsonify({"personas": personas})
-        else:
-            # No valid API key, use contextual personas
+                
+        except Exception as e:
+            print(f"OpenAI error: {e}")
+            # Fall back to contextual personas
             personas = get_contextual_personas(product_description)
             return jsonify({"personas": personas})
-            
+        
     except Exception as e:
         print(f"Error in generate_personas: {e}")
-        return jsonify({"error": str(e)}), 500
+        return jsonify({"error": "Failed to generate personas"}), 500
 
 @app.route('/run-simulation', methods=['POST'])
 def run_simulation():
     """Run the focus group simulation"""
     try:
-        # Get form data
-        product_description = request.form.get('product_description', '')
+        # Get product description
+        product_description = request.form.get('product_description', 'New product')
         
-        # Collect persona data
-        personas = []
+        # Collect persona data from form
+        personas_data = []
         for i in range(1, 4):
             persona = {
-                "name": request.form.get(f'name{i}', ''),
-                "age": request.form.get(f'age{i}', ''),
-                "occupation": request.form.get(f'job{i}', ''),
-                "traits": request.form.get(f'traits{i}', '')
+                'name': request.form.get(f'name{i}', f'Person {i}'),
+                'age': int(request.form.get(f'age{i}', 30)),
+                'occupation': request.form.get(f'job{i}', 'Professional'),
+                'traits': request.form.get(f'traits{i}', 'Average user')
             }
-            personas.append(persona)
+            personas_data.append(persona)
         
-        # Generate focus group responses
+        # Generate responses based on persona traits
         responses = []
         
-        if api_key and api_key != "your-openai-api-key-here":
-            try:
-                # Create a prompt for each persona
-                for persona in personas:
-                    prompt = f"""You are participating in a focus group for a new product. Respond as this specific persona:
-
-Persona: {persona['name']}, Age {persona['age']}, {persona['occupation']}
-Traits: {persona['traits']}
-
-Product: {product_description}
-
-Provide a realistic, detailed response (2-3 sentences) about:
-1. Your initial reaction to this product
-2. Would you use it? Why or why not?
-3. What concerns or questions do you have?
-
-Stay completely in character based on the persona traits."""
-
-                    response = client.chat.completions.create(
-                        model="gpt-3.5-turbo",
-                        messages=[
-                            {"role": "system", "content": "You are a realistic focus group participant. Respond in character with authentic, detailed feedback."},
-                            {"role": "user", "content": prompt}
-                        ],
-                        temperature=0.9,
-                        max_tokens=200
-                    )
-                    
-                    responses.append({
-                        "name": persona['name'],
-                        "role": f"{persona['age']} • {persona['occupation']}",
-                        "text": response.choices[0].message.content.strip()
-                    })
+        for p in personas_data:
+            traits_lower = p['traits'].lower()
+            
+            # Determine role and response based on traits
+            if any(word in traits_lower for word in ['skeptic', 'analytical', 'data', 'perfectionist', 'scientific', 'rigid']):
+                role = "The Expert/Skeptic"
+                text = f"As a {p['occupation']}, I approach this with professional skepticism. Being {p['traits'].split(',')[0].lower()}, I've seen too many products overpromise and underdeliver. I need to see third-party validation, user reviews, and ideally a free trial period to evaluate whether this actually works as claimed. My main concern is reliability - if I commit to this, it needs to work flawlessly. I'd also want to know about data privacy and what happens if I want to cancel. The concept has merit, but I'm not convinced yet."
                 
-                # Generate strategic insight
-                insight_prompt = f"""Based on these focus group responses, provide a strategic recommendation:
-
-Product: {product_description}
-
-Participant 1 ({personas[0]['name']} - {personas[0]['traits']}): {responses[0]['text'] if len(responses) > 0 else ''}
-
-Participant 2 ({personas[1]['name']} - {personas[1]['traits']}): {responses[1]['text'] if len(responses) > 1 else ''}
-
-Participant 3 ({personas[2]['name']} - {personas[2]['traits']}): {responses[2]['text'] if len(responses) > 2 else ''}
-
-Provide a concise strategic recommendation (3-4 sentences) for the product team. Focus on:
-1. Key themes from the feedback
-2. Suggested improvements
-3. Go-to-market considerations"""
-
-                insight_response = client.chat.completions.create(
-                    model="gpt-3.5-turbo",
-                    messages=[
-                        {"role": "system", "content": "You are a product strategy consultant. Provide actionable, data-driven recommendations."},
-                        {"role": "user", "content": insight_prompt}
-                    ],
-                    temperature=0.7,
-                    max_tokens=300
-                )
+            elif any(word in traits_lower for word in ['enthusiast', 'early adopter', 'optimistic', 'trend', 'experimental', 'influencer']):
+                role = "The Early Adopter"
+                text = f"I'm genuinely excited about this! As someone who's {p['traits'].split(',')[0].lower()}, I can see the potential immediately. This addresses a real pain point I've experienced personally. I'd definitely try it out - the value proposition is clear to me, and I'm willing to be among the first users. My main question is about the roadmap - what features are coming next? I want to know I'm investing in a product that will keep improving. I'm also likely to share this with my network if it delivers."
                 
-                insight = insight_response.choices[0].message.content.strip()
-                
-            except Exception as e:
-                print(f"OpenAI API error in simulation: {e}")
-                # Fall back to mock responses
-                responses, insight = generate_mock_responses(product_description, personas)
+            else:
+                role = "The Practical User"
+                text = f"I'm interested but need to be practical about this decision. As a {p['occupation']}, {p['traits'].split(',')[0].lower()}, so I need to carefully evaluate whether this justifies the cost and time investment. I'd start with whatever free option is available, but I'd need to see clear value within the first week to continue. My biggest concern is adoption - will I actually use this consistently, or will it become another forgotten subscription? I also worry about customer support if something goes wrong. Show me how this makes my life easier, and I'm in."
+            
+            responses.append({
+                'name': p['name'],
+                'role': role,
+                'text': text
+            })
+        
+        # Generate contextual insight based on product type
+        product_lower = product_description.lower()
+        
+        if any(word in product_lower for word in ['recipe', 'cook', 'food']):
+            insight = "Your expert persona (chef) needs authenticity - emphasize recipe testing and professional credibility. Your busy parent needs convenience without sacrificing nutrition - highlight meal planning and grocery list features. Your content creator needs visual appeal - focus on presentation and social features. Price sensitivity varies: professionals pay for quality, families watch budgets, creators want growth tools."
+        elif any(word in product_lower for word in ['fitness', 'workout', 'gym']):
+            insight = "The trainer needs data and progress tracking features. The executive needs time efficiency and flexibility - emphasize quick workouts and travel-friendly options. The student needs affordability and social motivation - consider a free tier and community features. All segments care about results, but measure them differently: professionals want performance data, executives want stress relief, students want visible changes."
+        elif any(word in product_lower for word in ['finance', 'money', 'invest']):
+            insight = "The financial planner needs compliance and security assurances - emphasize regulation and data protection. The tech worker wants automation and modern features - highlight AI and mobile experience. The near-retiree needs stability and education - focus on guaranteed returns and learning resources. Trust is the key barrier: professionals need credentials, tech workers want innovation, retirees want safety."
         else:
-            # No API key, use mock responses
-            responses, insight = generate_mock_responses(product_description, personas)
+            insight = "Your skeptical persona needs social proof - add testimonials, case studies, and metrics. Your enthusiast is your ideal early adopter - target them for beta programs and referrals. Your practical user represents your retention risk - focus on onboarding simplicity and quick wins. Consider tiered pricing: premium for enthusiasts, standard for skeptics (once convinced), and basic for practical users testing the waters."
         
         result = {
-            "product": product_description[:100] + "..." if len(product_description) > 100 else product_description,
-            "responses": responses,
-            "insight": insight
+            'product': product_description[:100] + '...' if len(product_description) > 100 else product_description,
+            'responses': responses,
+            'insight': insight
         }
         
         return render_template_string(HTML_TEMPLATE, result=result)
@@ -773,50 +763,24 @@ Provide a concise strategic recommendation (3-4 sentences) for the product team.
     except Exception as e:
         print(f"Error in run_simulation: {e}")
         return render_template_string(HTML_TEMPLATE, result={
-            "product": "Error running simulation",
-            "responses": [
-                {"name": "System", "role": "Error", "text": f"An error occurred: {str(e)}"}
+            'product': "Error running simulation",
+            'responses': [
+                {'name': 'System', 'role': 'Error', 'text': f'An error occurred: {str(e)}. Please try again.'}
             ],
-            "insight": "Please try again. Make sure all persona fields are filled out correctly."
+            'insight': 'Make sure all persona fields are filled out correctly.'
         })
-
-def generate_mock_responses(product_description, personas):
-    """Generate mock responses when OpenAI is not available"""
-    responses = []
-    
-    # Mock responses based on persona traits
-    for persona in personas:
-        traits_lower = persona['traits'].lower()
-        
-        if 'skeptical' in traits_lower or 'analytical' in traits_lower:
-            text = f"As someone who's skeptical of new products, I'd need to see some solid data before committing. The concept sounds interesting, but I'm concerned about how well it actually works in practice. I'd probably wait for reviews from trusted sources before trying it."
-        elif 'early adopter' in traits_lower or 'enthusiastic' in traits_lower:
-            text = f"This sounds amazing! I love trying new products and this seems right up my alley. The convenience factor is huge for me. I'd sign up for the free trial immediately and probably become a power user if it delivers on its promises."
-        elif 'budget-conscious' in traits_lower or 'risk-averse' in traits_lower:
-            text = f"I like the idea, but I'm worried about the monthly cost. $9.99 adds up over time. I'd need to be really sure it would save me money before committing. The free trial would be essential for me to test if it's worth the investment."
-        elif 'time-starved' in traits_lower or 'busy' in traits_lower:
-            text = f"Time is my biggest constraint, so if this actually saves me time, I'm interested. But I don't have bandwidth to learn complicated systems. It needs to be intuitive and work right out of the box. The convenience factor would determine whether I stick with it."
-        else:
-            text = f"This product addresses a real need I have. I like the concept and would definitely give it a try. My main question is about how well it adapts to individual preferences and whether the recommendations actually get better over time with more data."
-        
-        responses.append({
-            "name": persona['name'],
-            "role": f"{persona['age']} • {persona['occupation']}",
-            "text": text
-        })
-    
-    # Generate mock insight
-    insight = "Based on the focus group feedback, there's genuine interest in the product concept, but concerns about pricing and ease of use are consistent across personas. Consider emphasizing the free trial period in marketing to reduce adoption friction. The convenience factor is a strong selling point, but you'll need to provide concrete evidence of value to convert skeptical users. Early adopter feedback suggests potential for strong word-of-mouth if the experience exceeds expectations."
-    
-    return responses, insight
 
 @app.route('/health')
 def health():
     """Health check endpoint"""
-    return jsonify({"status": "healthy", "api_key_configured": bool(api_key and api_key != "your-openai-api-key-here")})
+    return jsonify({"status": "healthy", "api_key_configured": bool(api_key)})
 
 if __name__ == '__main__':
+    port = int(os.environ.get("PORT", 5000))
+    print("=" * 60)
     print("🚀 FocusGroupAI Starting...")
-    print(f"✅ OpenAI API Key: {'Configured' if api_key and api_key != 'your-openai-api-key-here' else 'Not configured - using fallback responses'}")
-    print("🌐 Open http://127.0.0.1:5000 in your browser")
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    print("=" * 60)
+    print(f"✅ OpenAI API Key: {'Configured' if api_key else 'Not configured'}")
+    print(f"🌐 Open http://localhost:{port} in your browser")
+    print("=" * 60)
+    app.run(host='0.0.0.0', port=port, debug=True)
