@@ -12,7 +12,7 @@ if not api_key:
     raise ValueError("OPENAI_API_KEY environment variable not set. Please set it before running the app.")
 
 os.environ["OPENAI_API_KEY"] = api_key
-client = OpenAI(api_key=api_key)
+import openai openai.api_key = api_key
 
 # Complete HTML Template
 HTML_TEMPLATE = """
@@ -784,5 +784,6 @@ if __name__ == '__main__':
     print(f"🌐 Open http://localhost:{port} in your browser")
     print("=" * 60)
     app.run(host='0.0.0.0', port=port, debug=True)
+
 
 
