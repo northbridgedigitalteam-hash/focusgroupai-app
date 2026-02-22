@@ -1,7 +1,7 @@
 import os
 import json
 from flask import Flask, render_template_string, request, jsonify
-from openai import OpenAI
+import openai
 
 # Initialize Flask
 app = Flask(__name__)
@@ -12,7 +12,6 @@ if not api_key:
     raise ValueError("OPENAI_API_KEY environment variable not set. Please set it before running the app.")
 
 os.environ["OPENAI_API_KEY"] = api_key
-import openai
 openai.api_key = api_key
 
 # Complete HTML Template
@@ -663,11 +662,11 @@ Return valid JSON only:
   {{"name": "Full Name", "age": 35, "occupation": "Job Title", "traits": "3-4 specific traits"}}
 ]"""
             
-           response = openai.ChatCompletion.create(
-    model="gpt-3.5-turbo",
-    messages=[{"role": "user", "content": prompt}],
-    temperature=0.7,
-    max_tokens=800
+            response = openai.ChatCompletion.create(
+                model="gpt-3.5-turbo",
+                messages=[{"role": "user", "content": prompt}],
+                temperature=0.7,
+                max_tokens=800
             )
             
             content = response.choices[0].message.content
@@ -785,8 +784,3 @@ if __name__ == '__main__':
     print(f"🌐 Open http://localhost:{port} in your browser")
     print("=" * 60)
     app.run(host='0.0.0.0', port=port, debug=True)
-
-
-
-
-
