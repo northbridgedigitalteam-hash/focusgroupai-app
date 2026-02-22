@@ -495,7 +495,7 @@ HTML_TEMPLATE = """
         </div>
         
         <footer>
-            <p>Built with OpenAI GPT-4. Synthetic research for rapid validation.</p>
+            <p>Built with OpenAI model="gpt-3.5-turbo",. Synthetic research for rapid validation.</p>
             <p style="margin-top: 8px;">© 2025 FocusGroupAI. All rights reserved.</p>
         </footer>
     </div>
@@ -784,4 +784,5 @@ if __name__ == '__main__':
     print(f"🌐 Open http://localhost:{port} in your browser")
     print("=" * 60)
     app.run(host='0.0.0.0', port=port, debug=True)
+
 
