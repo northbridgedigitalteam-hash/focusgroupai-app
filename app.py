@@ -663,7 +663,7 @@ Return valid JSON only:
 ]"""
             
             response = client.chat.completions.create(
-                model="gpt-4",
+                model="gpt-3.5-turbo",
                 messages=[{"role": "user", "content": prompt}],
                 temperature=0.7,
                 max_tokens=800
@@ -784,3 +784,4 @@ if __name__ == '__main__':
     print(f"🌐 Open http://localhost:{port} in your browser")
     print("=" * 60)
     app.run(host='0.0.0.0', port=port, debug=True)
+
